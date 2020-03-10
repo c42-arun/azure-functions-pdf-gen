@@ -2,7 +2,6 @@
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Queue;
 using Newtonsoft.Json;
-
 using UserReporting.Shared.Events;
 
 namespace UserReporting.Web.Services
