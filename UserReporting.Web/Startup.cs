@@ -1,13 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+
+using UserReporting.Web.Services;
 
 namespace UserReporting.Web
 {
@@ -24,6 +21,9 @@ namespace UserReporting.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            var queueConnectionString = Configuration.GetConnectionString("StorageConnectionString");
+            services.AddSingleton<IEventPublisher, EventPublisher>(_ => new EventPublisher(queueConnectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

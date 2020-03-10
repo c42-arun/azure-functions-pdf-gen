@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserReporting.Web", "UserReporting.Web\UserReporting.Web.csproj", "{55449EAC-B263-4042-B085-7B567609349B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserReporting.Web", "UserReporting.Web\UserReporting.Web.csproj", "{55449EAC-B263-4042-B085-7B567609349B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserReporting.Shared", "UserReporting.Shared\UserReporting.Shared.csproj", "{750876E9-0009-4C8D-A0A8-64D34B4648EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{55449EAC-B263-4042-B085-7B567609349B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55449EAC-B263-4042-B085-7B567609349B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55449EAC-B263-4042-B085-7B567609349B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{750876E9-0009-4C8D-A0A8-64D34B4648EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{750876E9-0009-4C8D-A0A8-64D34B4648EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{750876E9-0009-4C8D-A0A8-64D34B4648EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{750876E9-0009-4C8D-A0A8-64D34B4648EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
