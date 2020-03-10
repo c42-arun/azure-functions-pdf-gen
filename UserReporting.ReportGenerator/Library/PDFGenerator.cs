@@ -1,8 +1,4 @@
-﻿using PdfSharp;
-using PdfSharp.Pdf;
-using System.IO;
-
-using UserReporting.Shared.Events;
+﻿using UserReporting.Shared.Events;
 
 namespace UserReporting.ReportGenerator.Library
 {
@@ -17,15 +13,10 @@ namespace UserReporting.ReportGenerator.Library
                             Date of Birth: {request.DateOfBirth:dd/mm/yyyy}<br/>
                             Joined us on: {request.JoinedOn:dd/mm/yyyy}";
 
-            byte[] result = null;
+            var Renderer = new IronPdf.HtmlToPdf();
+            var pdfDoc = Renderer.RenderHtmlAsPdf(content);
+            byte[] result = pdfDoc.BinaryData;
 
-            using (var ms = new MemoryStream())
-            {
-                PdfDocument pdf = TheArtOfDev.HtmlRenderer.PdfSharp.PdfGenerator.GeneratePdf(content, PageSize.A4);
-                var _ = pdf.PageCount;
-                pdf.Save(ms);
-                result = ms.ToArray();
-            }
             return result;
         }
     }
